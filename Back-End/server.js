@@ -6,16 +6,22 @@ const compression = require("compression");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Security headers + gzip
+// Absolute path to Front-End folder
+const frontEndRoot = path.join(__dirname, "..", "Front-End");
+
+// Security & gzip
 app.use(helmet());
 app.use(compression());
 
-// Serve static front-end
-const frontEndRoot = path.join(__dirname, "..", "Front-End");
+// Serve /Assets/* from Front-End/Assets
+app.use("/Assets", express.static(path.join(frontEndRoot, "Assets")));
 
-app.use(express.static(frontEndRoot));
+// Serve the main page at /
+app.get("/", (req, res) => {
+  res.sendFile(path.join(frontEndRoot, "Pages", "index.html"));
+});
 
-// Always serve the main page for unknown routes (optional)
+// (Optional) Catch-all: send index.html for any other route
 app.get("*", (req, res) => {
   res.sendFile(path.join(frontEndRoot, "Pages", "index.html"));
 });
@@ -23,4 +29,3 @@ app.get("*", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Boudreau Logic site running on port ${PORT}`);
 });
-
