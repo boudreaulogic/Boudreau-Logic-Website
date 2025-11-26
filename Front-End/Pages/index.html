@@ -9,6 +9,14 @@
     content="Boudreau Logic — Native-owned technology and data solutions for Tribal nations, schools, and communities."
   />
 
+  <!-- TEMPORARY STYLE TO CONFIRM CSS LOADING -->
+  <style>
+    body {
+      background: hotpink !important;
+      border: 10px solid red !important;
+    }
+  </style>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +25,7 @@
     rel="stylesheet"
   />
 
-  <!-- Styles -->
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="/Assets/css/base.css" />
 </head>
 <body>
@@ -45,183 +53,8 @@
     </div>
   </header>
 
-  <main id="top">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <h1>Modern systems for Native communities.</h1>
-          <p>
-            Boudreau Logic builds secure, practical tech — from dashboards and forms
-            automation to classroom AV and network infrastructure — with Tribal nations
-            and schools at the center.
-          </p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn">Schedule a conversation</a>
-            <button class="btn btn-outline" data-scroll="#projects">
-              View recent work
-            </button>
-          </div>
-          <div class="hero-meta">
-            <span>⚙️ SharePoint • APIs • Adobe Sign • Networks</span>
-            <span>🌎 Based in Minnesota • Native-owned</span>
-          </div>
-        </div>
-
-        <div class="hero-card">
-          <h2>Current Focus</h2>
-          <ul>
-            <li>Student success dashboards (Populi + Canvas)</li>
-            <li>Automated approval workflows & e-sign</li>
-            <li>Secure network & classroom AV design</li>
-          </ul>
-          <p class="hero-note">
-            Built with security, data ownership, and community impact in mind.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section class="section" id="services">
-      <div class="container">
-        <h2 class="section-title">What we do</h2>
-        <div class="grid-3">
-          <article class="card">
-            <h3>Data & Dashboards</h3>
-            <p>
-              Real-time reporting from your existing systems — SIS, LMS, accounting —
-              so leadership can make decisions without manual spreadsheets.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Forms & Automation</h3>
-            <p>
-              Purchase requests, HR forms, agreements, and approvals — routed with
-              Adobe Sign and SharePoint/Sheets so nothing falls through the cracks.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>IT Infrastructure</h3>
-            <p>
-              Networks, Wi-Fi, AV systems, and remote access built for reliability and
-              security in schools and Tribal organizations.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="section section-alt" id="projects">
-      <div class="container">
-        <h2 class="section-title">Recent projects</h2>
-        <div class="grid-3">
-          <article class="card card-outline">
-            <h3>Tribal College Dashboard</h3>
-            <p>
-              Integrated Populi + Canvas APIs for a Tribal college to monitor
-              retention, course success, and early alerts in real time.
-            </p>
-          </article>
-          <article class="card card-outline">
-            <h3>Automated Approval Workflows</h3>
-            <p>
-              Built purchase request and HR onboarding flows using Adobe Sign +
-              SharePoint Lists to eliminate lost paperwork.
-            </p>
-          </article>
-          <article class="card card-outline">
-            <h3>Secure Campus Network</h3>
-            <p>
-              Designed and deployed segmented networks, firewalls, and classroom AV
-              systems for K-12 and higher-ed partners.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="section" id="about">
-      <div class="container split">
-        <div>
-          <h2 class="section-title">About Boudreau Logic</h2>
-          <p>
-            Boudreau Logic is a Native-owned technology and data studio focused on
-            solving real problems for Tribal governments, schools, and community
-            organizations.
-          </p>
-          <p>
-            We combine hands-on IT experience with automation, APIs, and custom
-            dashboards to reduce stress on staff and give leadership clear visibility.
-          </p>
-        </div>
-        <div class="info-block">
-          <h3>How we work</h3>
-          <ul>
-            <li>Plain language — no buzzword soup.</li>
-            <li>Start small, deliver something real quickly.</li>
-            <li>Document everything so your team isn’t locked in.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section section-alt" id="contact">
-      <div class="container">
-        <h2 class="section-title">Start a conversation</h2>
-        <p class="section-lead">
-          Tell us a bit about your project and we’ll follow up with a time to chat.
-        </p>
-
-        <form class="contact-form" id="contactForm">
-          <div class="form-row">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" required />
-          </div>
-
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required />
-          </div>
-
-          <div class="form-row">
-            <label for="org">Organization</label>
-            <input id="org" name="org" type="text" />
-          </div>
-
-          <div class="form-row">
-            <label for="message">What are you working on?</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-          </div>
-
-          <button type="submit" class="btn">Send message (demo)</button>
-          <p class="form-hint">
-            For now this is a front-end demo only — hook it to your backend or email
-            service later.
-          </p>
-
-          <p class="form-status" id="formStatus" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="bl-footer">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Boudreau Logic. All rights reserved.</span>
-      <span class="footer-links">
-        <a href="#top">Back to top</a>
-      </span>
-    </div>
-  </footer>
+  <!-- (rest of your existing content stays the same) -->
 
   <script src="/Assets/js/main.js"></script>
 </body>
 </html>
-
-
