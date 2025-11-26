@@ -1,0 +1,13 @@
+{
+  "name": "boudreau-logic-site",
+  "version": "1.0.0",
+  "main": "Back-End/server.js",
+  "scripts": {
+    "start": "node Back-End/server.js"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.19.0",
+    "helmet": "^7.0.0"
+  }
+}
